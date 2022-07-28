@@ -1,14 +1,11 @@
+const links = document.querySelectorAll('.header-menu a')
 
-
-
-
-
-
-
-function galeriaClique(imagem){
-  imagem.addEventListener('click', galeriaTrocar)
+function ativarLink(link){
+  const url = location.href
+  const href = link.href
+  if(url.includes(href)){
+    link.classList.add('ativo')
+  }
 }
 
-imagens.forEach(galeriaClique)
-
-  
+links.forEach(ativarLink)
